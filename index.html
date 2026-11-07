@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>قرآن كريم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>قرآن كريم</h1>
+  <p style="opacity: 0.7; margin-top: -8px;">تصميم عبدالله أحمد عبدالله عمران</p>
+
+  <nav>
+    <button data-tab="quran">المصحف</button>
+    <button data-tab="reciters">القرّاء</button>
+    <button data-tab="tasbih" class="active">المسبحة</button>
+  </nav>
+
+  <section id="quran" hidden>
+    <select id="surahSelect"></select>
+    <div id="ayahs">جاري التحميل...</div>
+  </section>
+
+  <section id="reciters" hidden>
+    <input id="search" placeholder="ابحث عن شيخ، مثلاً: المنشاوي">
+    <select id="reciterSelect"></select>
+    <select id="moshafSelect"></select>
+    <select id="reciterSurah"></select>
+    <button id="playBtn">تشغيل</button>
+    <audio id="player" controls></audio>
+    <p id="status">جاري التحميل...</p>
+  </section>
+
+  <section id="tasbih">
+    <select id="dhikr">
+      <option>سبحان الله</option>
+      <option>الحمد لله</option>
+      <option>الله أكبر</option>
+      <option>لا إله إلا الله</option>
+      <option>أستغفر الله</option>
+    </select>
+    <div id="count">0</div>
+    <button id="tap">سبّح</button>
+    <button id="reset">إعادة</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
